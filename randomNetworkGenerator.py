@@ -74,10 +74,6 @@ def generate_random_wanet_mesh_graph(meshSize, classesNum, numByzantine, graphNo
             
     classAssignmentContainer = np.random.choice(classAssignmentContainer, NSensors, replace=False).astype(np.int).tolist()
     
-    # DEBUG::
-    # print len(classAssignmentContainer)
-    # print classAssignmentContainer
-    
     # =======================================================
     # Building the graph and associate administrative keys
     # =======================================================
@@ -177,41 +173,3 @@ def generate_random_wanet_mesh_graph(meshSize, classesNum, numByzantine, graphNo
     # output.close()
     
     return g
-
-
-# meshSize = 5
-# numClasses = [3]
-# numMessages = [1]
-# numHops = [25000]
-# #numHops = [10]
-# mobility = True
-# saveMode = False
-
-# g = generate_random_wanet_mesh_graph(meshSize, 3, 4, 40, 12)
-# # Plot the graph
-# layout = g.layout(layout)
-# image = plot(g, **visual_style)
-# image.save("savedgraph.png")meshSize = 5
-# numClasses = [3]
-# numMessages = [1]
-# numHops = [25000]
-# #numHops = [10]
-# mobility = True
-# saveMode = False
-
-# g = generate_random_wanet_mesh_graph(meshSize, 3, 4, 40, 12)
-
-# bbox = (1000, 1000)
-# layout = "grid"
-
-# visual_style = {}
-# visual_style["vertex_label_angle"] = 0
-# visual_style["edge_width"] = 1
-# visual_style["layout"] = layout
-# visual_style["bbox"] = bbox
-# visual_style["margin"] = 20
-
-# # Plot the graph
-# layout = g.layout(layout)
-# image = plot(g, **visual_style)
-# image.save("savedgraph.png")
